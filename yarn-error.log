@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/lmz/.nvm/versions/node/v12.16.3/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run dev
+  /Users/lmz/.nvm/versions/node/v12.16.3/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run build
 
 PATH: 
-  /Users/lmz/opt/anaconda3/bin:/Users/lmz/.nvm/versions/node/v12.16.3/bin:/Users/lmz/.rvm/gems/ruby-2.6.0/bin:/Users/lmz/.rvm/gems/ruby-2.6.0@global/bin:/Users/lmz/.rvm/rubies/ruby-2.6.0/bin:/Applications/AndroidStudio.app/Contents/gradle/gradle-4.6/bin:/Users/lmz/Development/dart-sdk/bin:/Users/lmz/Development/android-sdk/emulator:/Users/lmz/Development/android-sdk/tools/bin:/Users/lmz/Development/android-sdk/platform-tools:/Users/lmz/Development/android-sdk/tools:/Users/lmz/Development/flutter/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/aria2/bin:/Library/Apple/usr/bin:/Users/lmz/Development/flutter/.pub-cache/bin:/Users/lmz/.rvm/bin:/Users/lmz/Documents/workspace/Go/bin
+  /Users/lmz/opt/anaconda3/bin:/Users/lmz/opt/anaconda3/condabin:/Users/lmz/.nvm/versions/node/v12.16.3/bin:/Users/lmz/.rvm/gems/ruby-2.6.0/bin:/Users/lmz/.rvm/gems/ruby-2.6.0@global/bin:/Users/lmz/.rvm/rubies/ruby-2.6.0/bin:/Applications/AndroidStudio.app/Contents/gradle/gradle-4.6/bin:/Users/lmz/Development/dart-sdk/bin:/Users/lmz/Development/android-sdk/emulator:/Users/lmz/Development/android-sdk/tools/bin:/Users/lmz/Development/android-sdk/platform-tools:/Users/lmz/Development/android-sdk/tools:/Users/lmz/Development/flutter/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/aria2/bin:/Library/Apple/usr/bin:/Users/lmz/Development/flutter/.pub-cache/bin:/Users/lmz/.rvm/bin:/Users/lmz/Documents/workspace/Go/bin
 
 Yarn version: 
   1.5.1
@@ -15,7 +15,7 @@ Platform:
 
 npm manifest: 
   {
-    "name": "webpack",
+    "name": "webpack_multi_page",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -8018,10 +8018,10 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 2
   Command: sh
-  Arguments: -c cross-env NODE_ENV=development webpack-dev-server --env.development --open --config ./build/webpack.dev.js
-  Directory: /Users/lmz/Documents/workspace/LmzProjectFramework/webpack_muti_page
+  Arguments: -c cross-env NODE_ENV=production webpack --env.production --config ./build/webpack.prod.js 
+  Directory: /Users/lmz/Documents/workspace/LmzProjectFramework/webpack_multi_page
   Output:
   
       at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)

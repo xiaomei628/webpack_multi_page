@@ -6,8 +6,26 @@ const MinCssExtractPlugin = require("mini-css-extract-plugin")
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 const getEntry = () => {
-    const entry = {}
-    const htmlWebpackPlugins = []
+    const entry = {
+        'index': path.join(__dirname, '..', './src/pages/index.js')
+    }
+    const htmlWebpackPlugins = [
+        new HtmlWebpackPlugin({
+            // favicon: path.resolve(__dirname, '../assets/lib/favicon-144.png'),
+            template: path.join(__dirname, '..', `./src/pages/index.html`),
+            filename: `./index.html`,
+            chunks: ['index'],
+            inject: true,
+            minify: {
+                html5: true,
+                collapseWhitespace: true,
+                preserveLineBreaks: false,
+                minifyJS: true,
+                minifyCSS: true,
+                removeComments: false
+            }
+        })
+    ]
     const entryFiles = glob.sync(path.join(__dirname, '..', './src/pages/*/index.js'))
     Object.keys(entryFiles).map(index => {
         const entryFile = entryFiles[index]
@@ -20,7 +38,8 @@ const getEntry = () => {
             new HtmlWebpackPlugin({
                 // favicon: path.resolve(__dirname, '../assets/lib/favicon-144.png'),
                 template: path.join(__dirname, '..', `src/pages/${pathname}/index.html`),
-                filename: `./pages/${pathname}.html`,
+                // filename: `./pages/${pathname}.html`,
+                filename: `./${pathname}.html`,
                 chunks: [pathname],
                 inject: true,
                 minify: {
@@ -34,6 +53,7 @@ const getEntry = () => {
             })
         )
     })
+    console.log(entry)
     return {
         entry,
         htmlWebpackPlugins

@@ -4,7 +4,7 @@ module.exports = {
     build: {
         assetsRoot: path.join(__dirname, '..', 'dist'),
         assetsSubDirectory: 'static',
-        assetsPublicPath: '../',
+        assetsPublicPath: '/',
         bundleAnalyzer: false,
         gzip: true
     },

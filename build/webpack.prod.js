@@ -53,17 +53,17 @@ prodWebconfig = merge(common, {
 
 prodWebconfig.plugins.push(new HardSourceWebpackPlugin())
 // copy custom static assets
-prodWebconfig.plugins.push(new CopyWebpackPlugin({
-    patterns: [
-        {
-            from: path.resolve(__dirname, '../static'),
-            to: config.build.assetsSubDirectory,
-            globOptions: {
-                ignore: ['.*']
-            }
-        }
-    ]
-}))
+// prodWebconfig.plugins.push(new CopyWebpackPlugin({
+//     patterns: [
+//         {
+//             from: path.resolve(__dirname, '../static'),
+//             to: config.build.assetsSubDirectory,
+//             globOptions: {
+//                 ignore: ['.*']
+//             }
+//         }
+//     ]
+// }))
 // css tree-shaking
 prodWebconfig.plugins.push(new PurifyCSS({
     paths: glob.sync([
